@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+<!--
+    # Information #
+    This configuration file will be used by the framework to install / remove packages
+-->
+    <Credentials>
+		<MachineName>win-newazure1</MachineName>
+        <DomainAdmin>MDH\Administrator</DomainAdmin>
+	</Credentials>
+
+	<CreateVM>
+        <HostName>win-newazure1</HostName>
+        <VMName>TestScriptVM</VMName>
+        <MemoryStartup></MemoryStartup>
+        <BootDeviceExstention>VHD</BootDeviceExstention>
+        <BootDevicePath>\\WIN-NEWAZURE1\c$\ClusterStorage\Volume01\VHD\MDH-TestVM.vhd</BootDevicePath>
+        <LocationPath>\\WIN-NEWAZURE1\c$\ClusterStorage\Volume01\VMs</LocationPath>
+	</CreateVM>
+	
+	<RemoveVM>
+        <Dialog1_Text>TEMPLATE TEXT WINDOW 1! ReplaceWith_NewLine TEMPLATE TEXT!</Dialog1_Text>
+	</RemoveVM>
+
+	<StartVM>
+        <FreeSpaceNeeded></FreeSpaceNeeded>
+	</StartVM>
+
+	<StopVM>
+        <process1>excel</process1>
+	</StopVM>
+</Configuration>
