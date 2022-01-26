@@ -2,31 +2,23 @@
 <Configuration>
 <!--
     # Information #
-    This configuration file will be used by the framework to install / remove packages
+    This configuration file will be used to create a virtual machine
+    here we will be assigning the "specs" of the VM 
 -->
     <Credentials>
-		<MachineName>win-newazure1</MachineName>
+        <MachineName>win-newazure1</MachineName>
         <DomainAdmin>MDH\Administrator</DomainAdmin>
-	</Credentials>
+    </Credentials>
 
 	<CreateVM>
         <HostName>win-newazure1</HostName>
-        <VMName>TestScriptVM</VMName>
-        <MemoryStartup></MemoryStartup>
+        <VMName>DemoVM</VMName>
+        <ClusterName>clusterv2</ClusterName>
+        <MemoryStartup>4GB</MemoryStartup>
+        <MinimumBytes>1GB</MinimumBytes>
+        <MaximumBytes>4GB</MaximumBytes>
         <BootDeviceExstention>VHD</BootDeviceExstention>
-        <BootDevicePath>\\WIN-NEWAZURE1\c$\ClusterStorage\Volume01\VHD\MDH-TestVM.vhd</BootDevicePath>
+        <BootDevicePath>\\WIN-NEWAZURE1\c$\ClusterStorage\Volume01\VHD\MDH-TestVMBAK.vhd</BootDevicePath>
         <LocationPath>\\WIN-NEWAZURE1\c$\ClusterStorage\Volume01\VMs</LocationPath>
 	</CreateVM>
-	
-	<RemoveVM>
-        <Dialog1_Text>TEMPLATE TEXT WINDOW 1! ReplaceWith_NewLine TEMPLATE TEXT!</Dialog1_Text>
-	</RemoveVM>
-
-	<StartVM>
-        <FreeSpaceNeeded></FreeSpaceNeeded>
-	</StartVM>
-
-	<StopVM>
-        <process1>excel</process1>
-	</StopVM>
 </Configuration>
